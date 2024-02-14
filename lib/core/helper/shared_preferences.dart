@@ -1,3 +1,4 @@
+import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:pets_finder/core/helper/extensions.dart';
 import 'package:pets_finder/core/networking/cache_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,11 +11,22 @@ class AppPreferences {
   Future<void> setAccessToken({required String accessToken}) async {
     sharedPreferences.setData(
         key: CacheConstants.accessToken, value: accessToken);
+    getAccessToken();
   }
 
-  Future<String> getAccessToken() async {
+  dynamic getAccessToken() {
     String accessToken =
         sharedPreferences.getString(CacheConstants.accessToken) ?? " ";
     return accessToken;
+  }
+
+  Future<bool> clearAll() async {
+    return await sharedPreferences.clear();
+  }
+
+  bool checkTokenExpire() {
+    final String token = getAccessToken();
+    final bool isTokenExpired = JwtDecoder.isExpired(token);
+    return isTokenExpired;
   }
 }

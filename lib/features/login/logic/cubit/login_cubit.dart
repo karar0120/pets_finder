@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pets_finder/core/helper/strings_manger.dart';
-import 'package:pets_finder/core/networking/api_constants.dart';
-import 'package:pets_finder/features/login/data/models/login_request_body.dart';
 import 'package:pets_finder/features/login/data/repos/login_repo.dart';
 
 part 'login_state.dart';
@@ -24,16 +21,11 @@ class LoginCubit extends Cubit<LoginState> {
   void emitLoginState() async {
     emit(const LoginState.loading());
 
-    final response = await _loginRepo.login(
-      LoginRequestBody(
-          grantType: AppString.clientCredentials,
-          clientId: ApiConstants.clientId,
-          clientSecret: ApiConstants.clientSecret),
-    );
+    final response = await _loginRepo.login();
     response.when(success: (loginResponse) {
       emit(LoginState.success(loginResponse));
     }, failure: (error) {
-      emit(LoginState.error(error: error.apiErrorModel.details ?? " "));
+      emit(LoginState.error(error: error.apiErrorModel.title ?? " "));
     });
   }
 }

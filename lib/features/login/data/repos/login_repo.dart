@@ -1,4 +1,6 @@
 import 'package:pets_finder/core/helper/shared_preferences.dart';
+import 'package:pets_finder/core/helper/strings_manger.dart';
+import 'package:pets_finder/core/networking/api_constants.dart';
 import 'package:pets_finder/core/networking/api_error_handler.dart';
 import 'package:pets_finder/core/networking/api_result.dart';
 import 'package:pets_finder/core/networking/api_service.dart';
@@ -12,12 +14,18 @@ class LoginRepo {
   final NetworkInfo _networkInfo;
   LoginRepo(this._apiService, this._appPreferences, this._networkInfo);
 
-  Future<ApiResult<LoginResponse>> login(
-      LoginRequestBody loginRequestBody) async {
+  Future<ApiResult<LoginResponse>> login() async {
     if (await _networkInfo.isConnected) {
       try {
-        final response = await _apiService.login(loginRequestBody);
-        _appPreferences.setAccessToken(accessToken: response.accessToken!);
+        final response = await _apiService.login(
+          LoginRequestBody(
+              grantType: AppString.clientCredentials,
+              clientId: ApiConstants.clientId,
+              clientSecret: ApiConstants.clientSecret),
+        );
+
+        await _appPreferences.setAccessToken(
+            accessToken: response.accessToken!);
         return ApiResult.success(response);
       } catch (error) {
         return ApiResult.failure(ErrorHandler.handle(error));

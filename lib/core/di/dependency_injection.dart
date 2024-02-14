@@ -5,6 +5,10 @@ import 'package:pets_finder/core/helper/shared_preferences.dart';
 import 'package:pets_finder/core/networking/api_service.dart';
 import 'package:pets_finder/core/networking/dio_factory.dart';
 import 'package:pets_finder/core/networking/netwotk_info.dart';
+import 'package:pets_finder/features/animals/data/repos/irepository.dart';
+import 'package:pets_finder/features/animals/domain/repository/animals_repo.dart';
+import 'package:pets_finder/features/animals/domain/use_case/animals.dart';
+import 'package:pets_finder/features/animals/presentation/controller/cubit/animals_cubit.dart';
 import 'package:pets_finder/features/login/data/repos/login_repo.dart';
 import 'package:pets_finder/features/login/logic/cubit/login_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,10 +26,7 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<AppPreferences>(
       () => AppPreferences(sharedPreferences: getIt()));
   // Dio & ApiService
-  getIt.registerLazySingleton<DioFactory>(
-      () => DioFactory(appPreferences: getIt()));
-
-  Dio dio = await getIt<DioFactory>().getDio();
+  Dio dio = DioFactory.getDio();
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 
   // login
@@ -33,5 +34,27 @@ Future<void> setupGetIt() async {
       getIt<ApiService>(), getIt<AppPreferences>(), getIt<NetworkInfo>()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt<LoginRepo>()));
 
-  // register
+  //get animals
+
+  getIt.registerLazySingleton<AnimalRepo>(() => AnimalRepo(
+        getIt<ApiService>(),
+        getIt<AppPreferences>(),
+        getIt<NetworkInfo>(),
+        getIt<LoginRepo>(),
+      ));
+  getIt.registerLazySingleton<AnimalsRepository>(() => AnimalRepo(
+      getIt<ApiService>(),
+      getIt<AppPreferences>(),
+      getIt<NetworkInfo>(),
+      getIt<LoginRepo>()));
+}
+
+Future<void> initAnimalsModule() async {
+  if (!GetIt.I.isRegistered<GetAnimalsUseCase>()) {
+    getIt.registerFactory<GetAnimalsUseCase>(() => GetAnimalsUseCase(
+          animalsRepository: getIt(),
+        ));
+    getIt.registerFactory<AnimalsCubit>(
+        () => AnimalsCubit(getIt<GetAnimalsUseCase>()));
+  }
 }
