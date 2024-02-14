@@ -1,5 +1,5 @@
+import 'package:pets_finder/core/helper/constances.dart';
 import 'package:pets_finder/core/helper/shared_preferences.dart';
-import 'package:pets_finder/core/helper/strings_manger.dart';
 import 'package:pets_finder/core/networking/api_constants.dart';
 import 'package:pets_finder/core/networking/api_error_handler.dart';
 import 'package:pets_finder/core/networking/api_result.dart';
@@ -19,7 +19,7 @@ class LoginRepo {
       try {
         final response = await _apiService.login(
           LoginRequestBody(
-              grantType: AppString.clientCredentials,
+              grantType: Constances.clientCredentials,
               clientId: ApiConstants.clientId,
               clientSecret: ApiConstants.clientSecret),
         );

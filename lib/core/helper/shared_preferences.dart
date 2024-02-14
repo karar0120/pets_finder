@@ -16,7 +16,7 @@ class AppPreferences {
 
   dynamic getAccessToken() {
     String accessToken =
-        sharedPreferences.getString(CacheConstants.accessToken) ?? " ";
+        sharedPreferences.getString(CacheConstants.accessToken) ?? "";
     return accessToken;
   }
 
@@ -26,7 +26,13 @@ class AppPreferences {
 
   bool checkTokenExpire() {
     final String token = getAccessToken();
-    final bool isTokenExpired = JwtDecoder.isExpired(token);
-    return isTokenExpired;
+    if (token.isEmpty) {
+      return true;
+    } else if (token.isNotEmpty) {
+      final bool isTokenExpired = JwtDecoder.isExpired(token);
+      return isTokenExpired;
+    } else {
+      return false;
+    }
   }
 }

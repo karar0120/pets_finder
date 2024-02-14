@@ -20,6 +20,7 @@ Map<String, dynamic> _$AnimalsResponseToJson(AnimalsResponse instance) =>
 
 AnimalsDataResponse _$AnimalsDataResponseFromJson(Map<String, dynamic> json) =>
     AnimalsDataResponse(
+      id: json['id'] as int?,
       name: json['name'] as String?,
       gender: json['gender'] as String?,
       type: json['type'] as String?,
@@ -31,6 +32,7 @@ AnimalsDataResponse _$AnimalsDataResponseFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$AnimalsDataResponseToJson(
         AnimalsDataResponse instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'photos': instance.photos,
       'name': instance.name,
       'gender': instance.gender,

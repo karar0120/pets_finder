@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pets_finder/core/di/dependency_injection.dart';
-import 'package:pets_finder/core/helper/strings_manger.dart';
+import 'package:pets_finder/core/helper/constances.dart';
 import 'package:pets_finder/core/routing/routes.dart';
 import 'package:pets_finder/features/animals/presentation/controller/cubit/animals_cubit.dart';
-import 'package:pets_finder/features/animals/presentation/ui/screens/animals.dart';
-import 'package:pets_finder/features/login/logic/cubit/login_cubit.dart';
-import '../../features/login/ui/login_screen.dart';
+import 'package:pets_finder/features/animals/presentation/ui/screens/animals_screens.dart';
 
 class AppRoute {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case Routes.loginScreen:
-        return MaterialPageRoute(
-            builder: (context) => BlocProvider<LoginCubit>(
-                  create: (context) => getIt<LoginCubit>(),
-                  child: const LoginScreen(),
-                ));
       case Routes.animalsScreen:
         initAnimalsModule();
         return MaterialPageRoute(
             builder: (context) => BlocProvider<AnimalsCubit>(
-                  create: (context) =>
-                      getIt<AnimalsCubit>()..emitGetAnimalsState(),
+                  create: (context) => getIt<AnimalsCubit>()..refreshData(),
                   child: const AnimalsScreen(),
                 ));
       default:
@@ -34,9 +25,9 @@ class AppRoute {
     return MaterialPageRoute(
         builder: (_) => Scaffold(
               appBar: AppBar(
-                title: const Text(AppString.noRouteFound),
+                title: const Text(Constances.noRouteFound),
               ),
-              body: const Center(child: Text(AppString.noRouteFound)),
+              body: const Center(child: Text(Constances.noRouteFound)),
             ));
   }
 }

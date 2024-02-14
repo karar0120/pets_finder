@@ -1,8 +1,13 @@
 class AppString {
-  static const noRouteFound = "noRouteFound";
-  static const clientCredentials = "client_credentials";
-  static const accessToken = "accessToken";
-  static const String empty = '';
-  static const int zero = 0;
-  static const pets = "Pets";
+  static const String pets = "Pets";
+  static const String type = 'Type : ';
+
+  static const String gender = 'Gender : ';
+
+  static const String name = 'Name : ';
+  static const String all = 'All';
+  static const String cat = 'Cat';
+  static const String horse = 'Horse';
+  static const String rabbit = 'rabbit';
+  static const String bird = 'bird';
 }

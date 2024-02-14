@@ -12,11 +12,13 @@ class AnimalsResponse {
 
 @JsonSerializable()
 class AnimalsDataResponse {
+  int? id;
   List<Photos>? photos;
   String? name;
   String? gender;
   String? type;
-  AnimalsDataResponse({this.name, this.gender, this.type, this.photos});
+  AnimalsDataResponse(
+      {this.id, this.name, this.gender, this.type, this.photos});
 
   factory AnimalsDataResponse.fromJson(Map<String, dynamic> json) =>
       _$AnimalsDataResponseFromJson(json);

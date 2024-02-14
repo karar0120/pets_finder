@@ -20,6 +20,8 @@ mixin _$AnimalsState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
     required TResult Function(T data) success,
     required TResult Function(String error) error,
   }) =>
@@ -28,6 +30,8 @@ mixin _$AnimalsState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
     TResult? Function(T data)? success,
     TResult? Function(String error)? error,
   }) =>
@@ -36,6 +40,8 @@ mixin _$AnimalsState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
     TResult Function(T data)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
@@ -45,6 +51,10 @@ mixin _$AnimalsState<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) =>
@@ -53,6 +63,9 @@ mixin _$AnimalsState<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
   }) =>
@@ -61,6 +74,9 @@ mixin _$AnimalsState<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -126,6 +142,8 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
     required TResult Function(T data) success,
     required TResult Function(String error) error,
   }) {
@@ -137,6 +155,8 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
     TResult? Function(T data)? success,
     TResult? Function(String error)? error,
   }) {
@@ -148,6 +168,8 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
     TResult Function(T data)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
@@ -163,6 +185,10 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) {
@@ -174,6 +200,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -185,6 +214,9 @@ class _$InitialImpl<T> implements _Initial<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -240,6 +272,8 @@ class _$LoadingImpl<T> implements Loading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
     required TResult Function(T data) success,
     required TResult Function(String error) error,
   }) {
@@ -251,6 +285,8 @@ class _$LoadingImpl<T> implements Loading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
     TResult? Function(T data)? success,
     TResult? Function(String error)? error,
   }) {
@@ -262,6 +298,8 @@ class _$LoadingImpl<T> implements Loading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
     TResult Function(T data)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
@@ -277,6 +315,10 @@ class _$LoadingImpl<T> implements Loading<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) {
@@ -288,6 +330,9 @@ class _$LoadingImpl<T> implements Loading<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -299,6 +344,9 @@ class _$LoadingImpl<T> implements Loading<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -312,6 +360,272 @@ class _$LoadingImpl<T> implements Loading<T> {
 
 abstract class Loading<T> implements AnimalsState<T> {
   const factory Loading() = _$LoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$incrementsNumberPageImplCopyWith<T, $Res> {
+  factory _$$incrementsNumberPageImplCopyWith(
+          _$incrementsNumberPageImpl<T> value,
+          $Res Function(_$incrementsNumberPageImpl<T>) then) =
+      __$$incrementsNumberPageImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$incrementsNumberPageImplCopyWithImpl<T, $Res>
+    extends _$AnimalsStateCopyWithImpl<T, $Res, _$incrementsNumberPageImpl<T>>
+    implements _$$incrementsNumberPageImplCopyWith<T, $Res> {
+  __$$incrementsNumberPageImplCopyWithImpl(_$incrementsNumberPageImpl<T> _value,
+      $Res Function(_$incrementsNumberPageImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$incrementsNumberPageImpl<T> implements incrementsNumberPage<T> {
+  const _$incrementsNumberPageImpl();
+
+  @override
+  String toString() {
+    return 'AnimalsState<$T>.incrementsNumberPage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$incrementsNumberPageImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+  }) {
+    return incrementsNumberPage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+  }) {
+    return incrementsNumberPage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    required TResult orElse(),
+  }) {
+    if (incrementsNumberPage != null) {
+      return incrementsNumberPage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return incrementsNumberPage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return incrementsNumberPage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (incrementsNumberPage != null) {
+      return incrementsNumberPage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class incrementsNumberPage<T> implements AnimalsState<T> {
+  const factory incrementsNumberPage() = _$incrementsNumberPageImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$setSelectedFilterAnimalsImplCopyWith<T, $Res> {
+  factory _$$setSelectedFilterAnimalsImplCopyWith(
+          _$setSelectedFilterAnimalsImpl<T> value,
+          $Res Function(_$setSelectedFilterAnimalsImpl<T>) then) =
+      __$$setSelectedFilterAnimalsImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$setSelectedFilterAnimalsImplCopyWithImpl<T, $Res>
+    extends _$AnimalsStateCopyWithImpl<T, $Res,
+        _$setSelectedFilterAnimalsImpl<T>>
+    implements _$$setSelectedFilterAnimalsImplCopyWith<T, $Res> {
+  __$$setSelectedFilterAnimalsImplCopyWithImpl(
+      _$setSelectedFilterAnimalsImpl<T> _value,
+      $Res Function(_$setSelectedFilterAnimalsImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$setSelectedFilterAnimalsImpl<T> implements setSelectedFilterAnimals<T> {
+  const _$setSelectedFilterAnimalsImpl();
+
+  @override
+  String toString() {
+    return 'AnimalsState<$T>.setSelectedFilterAnimals()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$setSelectedFilterAnimalsImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
+    required TResult Function(T data) success,
+    required TResult Function(String error) error,
+  }) {
+    return setSelectedFilterAnimals();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
+    TResult? Function(T data)? success,
+    TResult? Function(String error)? error,
+  }) {
+    return setSelectedFilterAnimals?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
+    TResult Function(T data)? success,
+    TResult Function(String error)? error,
+    required TResult orElse(),
+  }) {
+    if (setSelectedFilterAnimals != null) {
+      return setSelectedFilterAnimals();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
+    required TResult Function(Success<T> value) success,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return setSelectedFilterAnimals(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
+    TResult? Function(Success<T> value)? success,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return setSelectedFilterAnimals?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
+    TResult Function(Success<T> value)? success,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (setSelectedFilterAnimals != null) {
+      return setSelectedFilterAnimals(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class setSelectedFilterAnimals<T> implements AnimalsState<T> {
+  const factory setSelectedFilterAnimals() = _$setSelectedFilterAnimalsImpl<T>;
 }
 
 /// @nodoc
@@ -381,6 +695,8 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
     required TResult Function(T data) success,
     required TResult Function(String error) error,
   }) {
@@ -392,6 +708,8 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
     TResult? Function(T data)? success,
     TResult? Function(String error)? error,
   }) {
@@ -403,6 +721,8 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
     TResult Function(T data)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
@@ -418,6 +738,10 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) {
@@ -429,6 +753,9 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -440,6 +767,9 @@ class _$SuccessImpl<T> implements Success<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -526,6 +856,8 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() incrementsNumberPage,
+    required TResult Function() setSelectedFilterAnimals,
     required TResult Function(T data) success,
     required TResult Function(String error) error,
   }) {
@@ -537,6 +869,8 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? incrementsNumberPage,
+    TResult? Function()? setSelectedFilterAnimals,
     TResult? Function(T data)? success,
     TResult? Function(String error)? error,
   }) {
@@ -548,6 +882,8 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? incrementsNumberPage,
+    TResult Function()? setSelectedFilterAnimals,
     TResult Function(T data)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
@@ -563,6 +899,10 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(incrementsNumberPage<T> value)
+        incrementsNumberPage,
+    required TResult Function(setSelectedFilterAnimals<T> value)
+        setSelectedFilterAnimals,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
   }) {
@@ -574,6 +914,9 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult? Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -585,6 +928,9 @@ class _$ErrorImpl<T> implements Error<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(incrementsNumberPage<T> value)? incrementsNumberPage,
+    TResult Function(setSelectedFilterAnimals<T> value)?
+        setSelectedFilterAnimals,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),

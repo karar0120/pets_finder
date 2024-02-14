@@ -18,7 +18,7 @@ class PetsApp extends StatelessWidget {
         theme: ThemeData(
             primaryColor: ColorsManager.mainBlue,
             scaffoldBackgroundColor: Colors.white),
-        initialRoute: Routes.loginScreen,
+        initialRoute: Routes.animalsScreen,
         onGenerateRoute: AppRoute.generateRoute,
       ),
     );

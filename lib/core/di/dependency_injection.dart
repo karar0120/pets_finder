@@ -10,7 +10,6 @@ import 'package:pets_finder/features/animals/domain/repository/animals_repo.dart
 import 'package:pets_finder/features/animals/domain/use_case/animals.dart';
 import 'package:pets_finder/features/animals/presentation/controller/cubit/animals_cubit.dart';
 import 'package:pets_finder/features/login/data/repos/login_repo.dart';
-import 'package:pets_finder/features/login/logic/cubit/login_cubit.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final getIt = GetIt.instance;
@@ -32,7 +31,6 @@ Future<void> setupGetIt() async {
   // login
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(
       getIt<ApiService>(), getIt<AppPreferences>(), getIt<NetworkInfo>()));
-  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt<LoginRepo>()));
 
   //get animals
 
