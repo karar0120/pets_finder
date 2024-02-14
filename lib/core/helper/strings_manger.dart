@@ -4,4 +4,5 @@ class AppString {
   static const accessToken = "accessToken";
   static const String empty = '';
   static const int zero = 0;
+  static const pets = "Pets";
 }
