@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:online_clinic/core/helper/extensions.dart';
-import 'package:online_clinic/features/login/logic/cubit/login_cubit.dart';
-
+import 'package:pets_finder/core/helper/extensions.dart';
+import 'package:pets_finder/features/login/logic/cubit/login_cubit.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/color.dart';
 import '../../../../core/theming/styles.dart';

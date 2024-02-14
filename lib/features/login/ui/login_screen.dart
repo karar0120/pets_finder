@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:online_clinic/core/helper/spacing.dart';
-import 'package:online_clinic/features/login/ui/widget/build_form_field.dart';
-import 'package:online_clinic/features/login/ui/widget/build_login_button.dart';
-import 'package:online_clinic/features/login/ui/widget/build_text_login.dart';
-import 'package:online_clinic/features/login/ui/widget/login_bloc_listener.dart';
-import 'package:online_clinic/features/login/ui/widget/terms_and_conditions.dart';
+import 'package:pets_finder/core/helper/spacing.dart';
+import 'package:pets_finder/features/login/ui/widget/build_form_field.dart';
+import 'package:pets_finder/features/login/ui/widget/build_login_button.dart';
+import 'package:pets_finder/features/login/ui/widget/build_text_login.dart';
+import 'package:pets_finder/features/login/ui/widget/login_bloc_listener.dart';
+import 'package:pets_finder/features/login/ui/widget/terms_and_conditions.dart';
 
 import 'widget/build_sign_up_text.dart';
 

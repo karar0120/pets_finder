@@ -1,8 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:online_clinic/core/helper/extensions.dart';
-import 'package:online_clinic/core/routing/routes.dart';
-
+import 'package:pets_finder/core/helper/extensions.dart';
+import 'package:pets_finder/core/routing/routes.dart';
 import '../../../../core/theming/styles.dart';
 
 class DontHaveAccountText extends StatelessWidget {

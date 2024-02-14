@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:online_clinic/core/helper/spacing.dart';
+import 'package:pets_finder/core/helper/spacing.dart';
 
 import '../../../../core/theming/styles.dart';
 

@@ -1,6 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:online_clinic/features/register/data/models/register_request_body.dart';
-import 'package:online_clinic/features/register/data/models/register_response.dart';
 import 'package:retrofit/retrofit.dart';
 
 import '../../features/login/data/models/login_request_body.dart';
@@ -16,9 +14,5 @@ abstract class ApiService {
   @POST(ApiConstants.login)
   Future<LoginResponse> login(
     @Body() LoginRequestBody loginRequestBody,
-  );
-  @POST(ApiConstants.register)
-  Future<RegisterResponse> register(
-    @Body() RegisterRequestBody registerRequestBody,
   );
 }

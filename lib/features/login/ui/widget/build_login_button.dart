@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:online_clinic/core/theming/styles.dart';
-import 'package:online_clinic/core/widget/app_text_button.dart';
-import 'package:online_clinic/features/login/logic/cubit/login_cubit.dart';
+import 'package:pets_finder/core/theming/styles.dart';
+import 'package:pets_finder/core/widget/app_text_button.dart';
+import 'package:pets_finder/features/login/logic/cubit/login_cubit.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key});
@@ -19,8 +19,8 @@ class LoginButton extends StatelessWidget {
   }
 
   void validateThenDoLogin(BuildContext context) {
-    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginState();
-    }
+    //if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+    context.read<LoginCubit>().emitLoginState();
+    //}
   }
 }

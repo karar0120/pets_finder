@@ -61,6 +61,11 @@ dependencies:
   flutter_screenutil: ^5.9.0
   # A Dart package that helps to implement value based equality without needing to explicitly override == and hashCode
   equatable: ^2.0.5
+  #Flutter plugin for reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
+  shared_preferences: ^2.2.1
+  #This small library helps you to decode Json Web Tokens, you can also know if a JWT is already expired.
+  jwt_decoder: ^2.0.1
+  internet_connection_checker: ^1.0.0+1
 
 
 dev_dependencies:
@@ -73,6 +78,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.4.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
