@@ -4,9 +4,10 @@ part 'api_error_model.g.dart';
 
 @JsonSerializable()
 class ApiErrorModel extends Equatable {
-  final String? message;
-  final int? code;
-  const ApiErrorModel({required this.message, this.code});
+  final String? title;
+  final int? status;
+  final String? details;
+  const ApiErrorModel({required this.title, this.status, this.details});
 
   factory ApiErrorModel.fromJson(Map<String, dynamic> json) =>
       _$ApiErrorModelFromJson(json);
@@ -15,7 +16,8 @@ class ApiErrorModel extends Equatable {
 
   @override
   List<Object?> get props => [
-        message,
-        code,
+        title,
+        details,
+        status,
       ];
 }

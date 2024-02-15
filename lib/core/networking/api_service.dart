@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:online_clinic/features/register/data/models/register_request_body.dart';
-import 'package:online_clinic/features/register/data/models/register_response.dart';
+import 'package:pets_finder/features/animals/data/models/animals_response.dart';
+import 'package:pets_finder/features/animals/data/models/details_animal_response_.dart';
+import 'package:pets_finder/features/animals/data/models/get_animals_query_params.dart';
 import 'package:retrofit/retrofit.dart';
 
 import '../../features/login/data/models/login_request_body.dart';
@@ -17,8 +18,16 @@ abstract class ApiService {
   Future<LoginResponse> login(
     @Body() LoginRequestBody loginRequestBody,
   );
-  @POST(ApiConstants.register)
-  Future<RegisterResponse> register(
-    @Body() RegisterRequestBody registerRequestBody,
+
+  @GET(ApiConstants.animals)
+  Future<AnimalsResponse> getAnimals(
+    @Queries() GetAnimalsQueryParams getAnimalsQueryParams,
+    @Header("Authorization") String token,
+  );
+
+  @GET(ApiConstants.animalsDetails)
+  Future<AnimalsDetailsResponse> getAnimalsDetails(
+    @Path("id") int id,
+    @Header("Authorization") String token,
   );
 }

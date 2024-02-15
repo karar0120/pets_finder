@@ -1,31 +1,38 @@
-// import 'package:flutter/material.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
+import 'package:pets_finder/core/helper/extensions.dart';
+import 'package:pets_finder/core/networking/cache_constants.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-// class LocalService {
+class AppPreferences {
+  final SharedPreferences sharedPreferences;
 
-//  static SharedPreferences? _sharedPreferences;
+  AppPreferences({required this.sharedPreferences});
 
-//   static init() async {
-//     _sharedPreferences = await SharedPreferences.getInstance();
-//   }
+  Future<void> setAccessToken({required String accessToken}) async {
+    sharedPreferences.setData(
+        key: CacheConstants.accessToken, value: accessToken);
+    getAccessToken();
+  }
 
-//   static setData({required String key, required value}) async {
-//     debugPrint(
-//         "SharedPreferenceHelper: setData With key: $key and value :$value");
-//     switch (value.runtimeType) {
-//       case String:
-//         await _sharedPreferences!.setString(key, value);
-//         break;
-//       case int:
-//         await _sharedPreferences!.setInt(key, value);
-//         break;
-//       case bool:
-//         await _sharedPreferences!.setBool(key, value);
-//         break;
-//       case double:
-//         await _sharedPreferences!.setDouble(key, value);
-//         break;
-//       default:
-//         return null;
-//     }
-//   }
-// }
+  dynamic getAccessToken() {
+    String accessToken =
+        sharedPreferences.getString(CacheConstants.accessToken) ?? "";
+    return accessToken;
+  }
+
+  Future<bool> clearAll() async {
+    return await sharedPreferences.clear();
+  }
+
+  bool checkTokenExpire() {
+    final String token = getAccessToken();
+    if (token.isEmpty) {
+      return true;
+    } else if (token.isNotEmpty) {
+      final bool isTokenExpired = JwtDecoder.isExpired(token);
+      return isTokenExpired;
+    } else {
+      return false;
+    }
+  }
+}

@@ -67,8 +67,8 @@ class TextStyles {
 
   static TextStyle font14LightGrayRegular = TextStyle(
     fontSize: 14.sp,
-    fontWeight: FontWeightHelper.regular,
-    color: ColorsManager.lightGray,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.moreLightGray,
   );
 
   static TextStyle font14DarkBlueMedium = TextStyle(
