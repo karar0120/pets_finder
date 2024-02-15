@@ -9,14 +9,14 @@ import 'package:pets_finder/core/theming/color.dart';
 
 class CachedImage extends StatelessWidget {
   final String imageUrl;
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
 
   const CachedImage({
     super.key,
     required this.imageUrl,
-    this.height = AppSize.s100,
-    this.width = AppSize.s90,
+    this.height,
+    this.width,
   });
 
   @override
@@ -24,8 +24,8 @@ class CachedImage extends StatelessWidget {
     final media = MediaQuery.of(context).size;
     if (imageUrl.isEmpty) {
       return SizedBox(
-        height: AppSize.s100.h,
-        width: AppSize.s90.h,
+        height: height ?? AppSize.s100.h,
+        width: width ?? AppSize.s90.h,
         child: SvgPicture.asset(
           ImageManger.imagePlaceHolder,
           //  fit: BoxFit.cover,
@@ -36,9 +36,9 @@ class CachedImage extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSize.s4),
         child: CachedNetworkImage(
           imageUrl: imageUrl,
-          height: height,
+          height: height ?? AppSize.s100.h,
           fit: BoxFit.cover,
-          width: width,
+          width: width ?? AppSize.s90.w,
           placeholder: (context, url) => Center(
             child: LoadingAnimationWidget.discreteCircle(
                 color: ColorsManager.mainBlue,

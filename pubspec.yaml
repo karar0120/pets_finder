@@ -72,6 +72,8 @@ dependencies:
   #A collection of loading indicators animated with flutter. Heavily inspired by @tobiasahlin's SpinKit.
   flutter_spinkit: ^5.1.0
   loading_animation_widget: ^1.2.0+4
+  #Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
+  url_launcher: ^6.1.6
   
 
 

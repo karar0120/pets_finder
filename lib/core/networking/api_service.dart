@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pets_finder/features/animals/data/models/animals_response.dart';
+import 'package:pets_finder/features/animals/data/models/details_animal_response_.dart';
 import 'package:pets_finder/features/animals/data/models/get_animals_query_params.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -21,6 +22,12 @@ abstract class ApiService {
   @GET(ApiConstants.animals)
   Future<AnimalsResponse> getAnimals(
     @Queries() GetAnimalsQueryParams getAnimalsQueryParams,
+    @Header("Authorization") String token,
+  );
+
+  @GET(ApiConstants.animalsDetails)
+  Future<AnimalsDetailsResponse> getAnimalsDetails(
+    @Path("id") int id,
     @Header("Authorization") String token,
   );
 }

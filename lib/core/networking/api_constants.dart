@@ -2,7 +2,7 @@ class ApiConstants {
   static const String baseUrl = "https://api.petfinder.com/v2/";
   static const String login = "oauth2/token";
   static const String animals = "animals";
-  static String animalsId(int animalId) => 'animals/$animalId';
+  static const String animalsDetails = 'animals/{id}';
 
   static const String clientId =
       'JwsIhhsuzL7Ga4y7Hkx3YSAVHKzbqsxiHuiXrcHvGi87Vu05Gq';

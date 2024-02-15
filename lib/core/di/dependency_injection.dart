@@ -7,7 +7,9 @@ import 'package:pets_finder/core/networking/dio_factory.dart';
 import 'package:pets_finder/core/networking/netwotk_info.dart';
 import 'package:pets_finder/features/animals/data/repos/irepository.dart';
 import 'package:pets_finder/features/animals/domain/repository/animals_repo.dart';
+import 'package:pets_finder/features/animals/domain/use_case/animal_details.dart';
 import 'package:pets_finder/features/animals/domain/use_case/animals.dart';
+import 'package:pets_finder/features/animals/presentation/controller/animal_details_cubit/cubit/animal_details_cubit.dart';
 import 'package:pets_finder/features/animals/presentation/controller/cubit/animals_cubit.dart';
 import 'package:pets_finder/features/login/data/repos/login_repo.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -54,5 +56,16 @@ Future<void> initAnimalsModule() async {
         ));
     getIt.registerFactory<AnimalsCubit>(
         () => AnimalsCubit(getIt<GetAnimalsUseCase>()));
+  }
+}
+
+Future<void> initAnimalsDetailsModule() async {
+  if (!GetIt.I.isRegistered<GetAnimalsDetailsUseCase>()) {
+    getIt.registerFactory<GetAnimalsDetailsUseCase>(
+        () => GetAnimalsDetailsUseCase(
+              animalsRepository: getIt(),
+            ));
+    getIt.registerFactory<AnimalDetailsCubit>(
+        () => AnimalDetailsCubit(getIt<GetAnimalsDetailsUseCase>()));
   }
 }

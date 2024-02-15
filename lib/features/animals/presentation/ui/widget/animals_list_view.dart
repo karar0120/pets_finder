@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pets_finder/core/helper/extensions.dart';
 import 'package:pets_finder/core/helper/spacing.dart';
 import 'package:pets_finder/core/helper/values_manger.dart';
+import 'package:pets_finder/core/routing/routes.dart';
 import 'package:pets_finder/core/widget/loader.dart';
 import 'package:pets_finder/core/widget/no_record_found.dart';
 import 'package:pets_finder/features/animals/presentation/controller/cubit/animals_cubit.dart';
@@ -28,8 +30,14 @@ class AnimlasList extends StatelessWidget {
               children: List.generate(animalsController.animalsDate.length + 1,
                   (index) {
                 if (index < animalsController.animalsDate.length) {
-                  return AnimalsCard(
-                    animalsData: animalsController.animalsDate[index],
+                  return GestureDetector(
+                    onTap: () {
+                      context.pushNamed(Routes.animalsDetailsScreen,
+                          arguments: animalsController.animalsDate[index].id);
+                    },
+                    child: AnimalsCard(
+                      animalsData: animalsController.animalsDate[index],
+                    ),
                   );
                 } else {
                   if (animalsController.isScroll == false &&

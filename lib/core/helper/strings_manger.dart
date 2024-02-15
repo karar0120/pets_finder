@@ -1,5 +1,6 @@
 class AppString {
   static const String pets = "Pets";
+  static const String petsDetails = "Pets Details";
   static const String type = 'Type : ';
 
   static const String gender = 'Gender : ';
@@ -10,4 +11,10 @@ class AppString {
   static const String horse = 'Horse';
   static const String rabbit = 'rabbit';
   static const String bird = 'bird';
+
+  static const String size = 'Size : ';
+  static const String color = 'Color : ';
+  static const String address = 'Address : ';
+  static const String petsWebsite = "Pet's Website";
+  static const String nullValue = "NA";
 }
