@@ -62,7 +62,7 @@ class AnimalDetailsCard extends StatelessWidget {
         verticalSpace(AppSize.s50),
         AppTextButton(
             buttonText: AppString.petsWebsite,
-            textStyle: TextStyles.font16WhiteSemiBold,
+            textStyle: TextStyles.font14LightGrayRegular,
             onPressed: () {
               launchLink(animalDetails.url);
             })

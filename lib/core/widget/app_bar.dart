@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pets_finder/core/helper/extensions.dart';
 import 'package:pets_finder/core/helper/values_manger.dart';
+import 'package:pets_finder/core/theming/styles.dart';
 
 class GeneralAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? title;
@@ -37,6 +38,7 @@ class GeneralAppBar extends StatelessWidget implements PreferredSizeWidget {
         leadingWidth: leadingWidth,
         centerTitle: centerTitle ?? true,
         title: title,
+        titleTextStyle: TextStyles.font16WhiteMedium,
         elevation: elevation,
         leading: leading ??
             InkWell(

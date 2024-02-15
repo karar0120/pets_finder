@@ -25,7 +25,7 @@ class CachedImage extends StatelessWidget {
     if (imageUrl.isEmpty) {
       return SizedBox(
         height: height ?? AppSize.s100.h,
-        width: width ?? AppSize.s90.h,
+        width: width ?? AppSize.s90.w,
         child: SvgPicture.asset(
           ImageManger.imagePlaceHolder,
         ),

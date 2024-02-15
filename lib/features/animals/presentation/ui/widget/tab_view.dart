@@ -20,6 +20,7 @@ class TapBarViews extends StatelessWidget {
         ),
         unselectedLabelColor: ColorsManager.moreLightGray,
         unselectedLabelStyle: TextStyles.font14LightGrayRegular,
+        labelStyle: TextStyles.font14LightGrayRegular,
         onTap: (int index) {
           context
               .read<AnimalsCubit>()
