@@ -35,7 +35,6 @@ class GeneralAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         automaticallyImplyLeading: false,
         leadingWidth: leadingWidth,
-        backgroundColor: appBarColor ?? Theme.of(context).toggleableActiveColor,
         centerTitle: centerTitle ?? true,
         title: title,
         elevation: elevation,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pets_finder/core/helper/extensions.dart';
-import 'package:pets_finder/core/helper/spacing.dart';
 import 'package:pets_finder/core/helper/values_manger.dart';
 import 'package:pets_finder/core/routing/routes.dart';
 import 'package:pets_finder/core/widget/loader.dart';
@@ -56,8 +55,7 @@ class AnimlasList extends StatelessWidget {
                     }
                   }
                 }
-              })
-                ..add(verticalSpace(AppSize.s25)),
+              }),
             );
           },
         ));

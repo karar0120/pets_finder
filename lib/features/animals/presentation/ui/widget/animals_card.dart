@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_finder/core/helper/spacing.dart';
 import 'package:pets_finder/core/helper/strings_manger.dart';
 import 'package:pets_finder/core/helper/values_manger.dart';
+import 'package:pets_finder/core/theming/styles.dart';
 import 'package:pets_finder/core/widget/image_holder.dart';
 import 'package:pets_finder/features/animals/domain/entity/animals.dart';
 
@@ -31,25 +32,58 @@ class AnimalsCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Text(AppString.name),
+                      Text(
+                        AppString.name,
+                        style: TextStyles.font16WhiteSemiBold,
+                      ),
                       horizontalSpace(AppSize.s8),
-                      Expanded(child: Text(animalsData.name))
+                      Expanded(
+                          child: Text(
+                        animalsData.name.isEmpty
+                            ? AppString.nullValue
+                            : animalsData.name,
+                        style: TextStyles.font14LightGrayRegular,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ))
                     ],
                   ),
                   verticalSpace(AppSize.s12),
                   Row(
                     children: [
-                      const Text(AppString.gender),
+                      Text(
+                        AppString.gender,
+                        style: TextStyles.font16WhiteSemiBold,
+                      ),
                       horizontalSpace(AppSize.s8),
-                      Expanded(child: Text(animalsData.gender))
+                      Expanded(
+                          child: Text(
+                        animalsData.gender.isEmpty
+                            ? AppString.nullValue
+                            : animalsData.gender,
+                        style: TextStyles.font14LightGrayRegular,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ))
                     ],
                   ),
                   verticalSpace(AppSize.s12),
                   Row(
                     children: [
-                      const Text(AppString.type),
+                      Text(
+                        AppString.type,
+                        style: TextStyles.font16WhiteSemiBold,
+                      ),
                       horizontalSpace(AppSize.s8),
-                      Expanded(child: Text(animalsData.type))
+                      Expanded(
+                          child: Text(
+                        animalsData.type.isEmpty
+                            ? AppString.nullValue
+                            : animalsData.type,
+                        style: TextStyles.font14LightGrayRegular,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ))
                     ],
                   ),
                 ],

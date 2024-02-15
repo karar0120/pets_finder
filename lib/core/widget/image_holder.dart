@@ -28,7 +28,6 @@ class CachedImage extends StatelessWidget {
         width: width ?? AppSize.s90.h,
         child: SvgPicture.asset(
           ImageManger.imagePlaceHolder,
-          //  fit: BoxFit.cover,
         ),
       );
     } else {
@@ -41,7 +40,7 @@ class CachedImage extends StatelessWidget {
           width: width ?? AppSize.s90.w,
           placeholder: (context, url) => Center(
             child: LoadingAnimationWidget.discreteCircle(
-                color: ColorsManager.mainBlue,
+                color: ColorsManager.moreLightGray,
                 size: AppSize.s30,
                 secondRingColor: Colors.transparent,
                 thirdRingColor: Colors.transparent),

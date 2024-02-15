@@ -4,6 +4,8 @@ import 'package:pets_finder/core/helper/launch_url.dart';
 import 'package:pets_finder/core/helper/spacing.dart';
 import 'package:pets_finder/core/helper/strings_manger.dart';
 import 'package:pets_finder/core/helper/values_manger.dart';
+import 'package:pets_finder/core/theming/color.dart';
+import 'package:pets_finder/core/theming/styles.dart';
 import 'package:pets_finder/core/widget/app_text_button.dart';
 import 'package:pets_finder/core/widget/image_holder.dart';
 import 'package:pets_finder/features/animals/domain/entity/details_animal.dart';
@@ -24,8 +26,14 @@ class AnimalDetailsCard extends StatelessWidget {
           height: AppSize.s300.h,
           width: double.infinity,
         ),
-        verticalSpace(AppSize.s70),
-        const Text(AppString.petsDetails),
+        verticalSpace(AppSize.s20),
+        Center(
+          child: Text(
+            AppString.petsDetails,
+            style:
+                TextStyles.font24BlackBold.copyWith(color: ColorsManager.dark),
+          ),
+        ),
         verticalSpace(AppSize.s30),
         AnimalDetailsCardItem(
           title: AppString.name,
@@ -54,7 +62,7 @@ class AnimalDetailsCard extends StatelessWidget {
         verticalSpace(AppSize.s50),
         AppTextButton(
             buttonText: AppString.petsWebsite,
-            textStyle: const TextStyle(color: Colors.white),
+            textStyle: TextStyles.font16WhiteSemiBold,
             onPressed: () {
               launchLink(animalDetails.url);
             })

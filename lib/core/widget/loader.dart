@@ -11,7 +11,7 @@ class LoaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SpinKitThreeBounce(
-        color: ColorsManager.darkBlue,
+        color: ColorsManager.moreLightGray,
         size: sizeLoader.sw,
       ),
     );

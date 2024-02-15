@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_finder/core/helper/strings_manger.dart';
+import 'package:pets_finder/core/helper/values_manger.dart';
 import 'package:pets_finder/core/routing/app_router.dart';
 import 'package:pets_finder/core/routing/routes.dart';
-import 'package:pets_finder/core/theming/color.dart';
+import 'package:pets_finder/core/theming/theme_data.dart';
 
 class PetsApp extends StatelessWidget {
   const PetsApp({super.key});
@@ -10,14 +12,12 @@ class PetsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(AppSize.s375, AppSize.s812),
       minTextAdapt: true,
       child: MaterialApp(
-        title: "Pets Finder App",
+        title: AppString.petsFinderApp,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-            primaryColor: ColorsManager.mainBlue,
-            scaffoldBackgroundColor: Colors.white),
+        theme: themeData,
         initialRoute: Routes.animalsScreen,
         onGenerateRoute: AppRoute.generateRoute,
       ),

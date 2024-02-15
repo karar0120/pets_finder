@@ -15,8 +15,8 @@ class AnimlasContent extends StatelessWidget {
       padding: const EdgeInsets.all(AppPadding.p12),
       child: Column(
         children: [
+          verticalSpace(AppSize.s5),
           const TapBarViews(),
-          verticalSpace(AppSize.s20),
           const AnimlasList()
         ],
       ),
