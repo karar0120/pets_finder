@@ -125,9 +125,9 @@ Image Source : [ResoCoder](https://resocoder.com)
 ![photo_2024-02-15_18-20-39](https://github.com/karar0120/pets_finder/assets/92108624/08032491-c781-4d4a-8635-ad675f9a19ff)
 ![photo_2024-02-15_18-20-26](https://github.com/karar0120/pets_finder/assets/92108624/1e9c7d6c-6445-4fdb-a465-c952ee3872a3)
 ![photo_2024-02-15_18-20-44](https://github.com/karar0120/pets_finder/assets/92108624/741b1449-38e8-47ff-8a2c-098eef6d58d5)
-![photo_2024-02-15_18-20-44](https://github.com/karar0120/pets_finder/assets/92108624/741b1449-38e8-47ff-8a2c-098eef6d58d5)
-
-
+![photo_2024-02-15_18-20-31](https://github.com/karar0120/pets_finder/assets/92108624/7d52b8b3-717e-4a76-9747-c198da673c2b)
+![photo_2024-02-15_18-20-42](https://github.com/karar0120/pets_finder/assets/92108624/a004c829-79b5-4f1a-85f5-3bb38806fadb)
+![photo_2024-02-15_18-19-21](https://github.com/karar0120/pets_finder/assets/92108624/8a903232-33c5-40b1-845b-577cff3ae0a7)
 
 
 ## Pet Details:
@@ -139,3 +139,7 @@ Image Source : [ResoCoder](https://resocoder.com)
 - Implemented navigation back to the main screen from the pet details screen.
 
 # :iphone: Screens
+![photo_2024-02-15_18-19-56](https://github.com/karar0120/pets_finder/assets/92108624/6b778b5c-8ad2-4c0a-8d4b-9c5c4667a71d)
+![photo_2024-02-15_18-19-51](https://github.com/karar0120/pets_finder/assets/92108624/c15a166f-e55c-47b9-a083-e3acaac1621e)
+![photo_2024-02-15_18-20-24](https://github.com/karar0120/pets_finder/assets/92108624/1bbefcdb-0735-4db6-9551-3e1831ac3431)
+
