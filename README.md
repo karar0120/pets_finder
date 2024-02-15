@@ -120,6 +120,15 @@ Image Source : [ResoCoder](https://resocoder.com)
 - Ensured that the "All" tab is selected by default upon app launch.
 - Implemented horizontal scrolling for the filter tabs, ensuring visibility of all options.
 - Implemented pagination to load the next page when scrolling to the bottom of the list.
+# :iphone: Screens
+![photo_2024-02-15_18-19-24](https://github.com/karar0120/pets_finder/assets/92108624/ed75b88b-26e1-4d56-a682-88e969086733)
+![photo_2024-02-15_18-20-39](https://github.com/karar0120/pets_finder/assets/92108624/08032491-c781-4d4a-8635-ad675f9a19ff)
+![photo_2024-02-15_18-20-26](https://github.com/karar0120/pets_finder/assets/92108624/1e9c7d6c-6445-4fdb-a465-c952ee3872a3)
+![photo_2024-02-15_18-20-44](https://github.com/karar0120/pets_finder/assets/92108624/741b1449-38e8-47ff-8a2c-098eef6d58d5)
+![photo_2024-02-15_18-20-44](https://github.com/karar0120/pets_finder/assets/92108624/741b1449-38e8-47ff-8a2c-098eef6d58d5)
+
+
+
 
 ## Pet Details:
 
@@ -127,6 +136,6 @@ Image Source : [ResoCoder](https://resocoder.com)
 - Handled cases where name, size, primary color, or address have empty values, displaying "NA" accordingly.
 - Implemented a placeholder for cases where no photo is received.
 - Implemented functionality to open the publisher's website when the button is clicked.
-- Implemented navigation back to the main screen from the pet details screen.     
-                
+- Implemented navigation back to the main screen from the pet details screen.
+
 # :iphone: Screens
